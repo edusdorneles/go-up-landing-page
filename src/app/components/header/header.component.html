@@ -1,0 +1,94 @@
+<div class="container mx-auto px-4 2xl:px-0">
+  <header class="h-20 lg:h-28 flex items-center justify-between">
+    <a routerLink="/" class="cursor-pointer">
+      <div class="flex gap-2 lg:gap-4 items-center">
+        <img class="w-10 lg:w-16" src="../../../assets/logo.png" alt="Logo da Go Up Golf Academy" />
+
+        <h1 class="font-medium text-lg lg:text-xl leading-5 lg:leading-6">
+          GO UP GOLF<br />ACADEMY
+        </h1>
+      </div>
+    </a>
+
+    <nav class="hidden lg:block">
+      <ul class="flex gap-8 items-center">
+        <li>
+          <a routerLink="/" class="cursor-pointer font-medium">INÍCIO</a>
+        </li>
+
+        <li>
+          <a routerLink="/classes" class="cursor-pointer font-medium">AULAS</a>
+        </li>
+
+        <li>
+          <a routerLink="/experiences" class="cursor-pointer font-medium">EXPERIÊNCIAS</a>
+        </li>
+
+        <li>
+          <a
+            target="_blank"
+            class="cursor-pointer font-bold"
+            href="https://golf.dev.upreserva.com.br/login/"
+          >
+            ÁREA DO ALUNO
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="flex lg:hidden">
+      <img
+        class="w-7"
+        alt="Ícone de menu"
+        (click)="onClickMenu()"
+        src="../../../assets/icons/black-menu.svg"
+      />
+
+      <ul
+        class="absolute flex flex-col items-center justify-center gap-4 top-20 shadow-md border-t bg-white border-slate-200 border-solid p-4 {{
+          isMenuOpen ? 'right-0 left-0' : 'right-full'
+        }}"
+      >
+        <li>
+          <a
+            routerLink="/"
+            (click)="onClickMenuItem()"
+            class="cursor-pointer text-center text-sm font-medium"
+          >
+            INÍCIO
+          </a>
+        </li>
+
+        <li>
+          <a
+            routerLink="/classes"
+            (click)="onClickMenuItem()"
+            class="cursor-pointer text-center text-sm font-medium"
+          >
+            AULAS
+          </a>
+        </li>
+
+        <li>
+          <a
+            routerLink="/experiences"
+            (click)="onClickMenuItem()"
+            class="cursor-pointer text-center text-sm font-medium"
+          >
+            EXPERIÊNCIAS
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#"
+            (click)="onClickMenuItem()"
+            class="cursor-pointer text-center text-sm font-bold"
+          >
+            ÁREA DO ALUNO
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+</div>
